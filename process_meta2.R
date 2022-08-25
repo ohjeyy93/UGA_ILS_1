@@ -1,0 +1,10 @@
+#raw_RNA <- readRDS("data/snRNA.raw.sparse_fixed.rds")
+#print(raw_RNA)
+#raw_RNA <- readRDS("data/snRNA.raw.sparse.rds")
+#colnames(raw_RNA)
+#data2 <- read.table(file = "data/maize_282.v8.3.celltype_metadata.scJoint.txt", header = TRUE)
+#rownames(data2) <- data2[,1]
+#rownames(data2)
+raw_ATAC <- readRDS("data/snRNA.raw.sparse_fixed.rds")
+#colnames(raw_ATAC)
+print(raw_ATAC)
