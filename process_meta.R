@@ -11,24 +11,25 @@ library(tidyr)
 library(Matrix)
 
 
-data <- read.table(file = "data/snRNA.raw.metadata.txt", header = TRUE)
+data <- read.table(file = "data/maize_leaf_harmony_integrated.v3.subLEIDEN.metadata.txt", header = TRUE)
 #print(rownames(data))
 #raw_ATAC <- readRDS("data/scATAC.raw.sparse.rds")
 raw_RNA <- readRDS("data/snRNA.raw.sparse.rds")
 #raw_RNA <- readRDS("data/snRNA.raw.sparse_fixed.rds")
 raw_RNA <- raw_RNA[,colnames(raw_RNA) %in% rownames(data)]
-saveRDS(raw_RNA, file = "data/snRNA.raw.sparse_referenced.rds")
+print(raw_RNA)
+saveRDS(raw_RNA, file = "data/snRNA.raw.sparse_right_path.rds")
 #raw_RNA <- readRDS("data/snRNA.raw.sparse_fixed.rds")
 
 
-data2 <- read.table(file = "data/maize_282.v8.3.scATAC_ALL_CELLs.metadata_reference.txt", header = TRUE)
+#data2 <- read.table(file = "data/maize_282.v8.3.scATAC_ALL_CELLs.metadata_reference.txt", header = TRUE)
 #print(rownames(data))
-raw_ATAC <- readRDS("data/scATAC.raw.sparse.rds")
+#raw_ATAC <- readRDS("data/scATAC.raw.sparse.rds")
 #raw_ATAC <- readRDS("data/scATAC.raw.sparse.rds")
 #S4ToList(raw_ATAC)
-rownames(data2) <- data2[,1]
-raw_ATAC <- raw_ATAC[,colnames(raw_ATAC) %in% rownames(data2)]
-saveRDS(raw_ATAC, file = "data/scATAC.raw.sparse_referenced.rds")
+#rownames(data2) <- data2[,1]
+#raw_ATAC <- raw_ATAC[,colnames(raw_ATAC) %in% rownames(data2)]
+#saveRDS(raw_ATAC, file = "data/scATAC.raw.sparse_referenced.rds")
 
 #saveRDS(raw_RNA, file = "data/snRNA.raw.sparse_fixed.rds")
 #raw_ATAC <- readRDS("data/snRNA.raw.sparse_fixed.rds")

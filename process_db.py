@@ -94,10 +94,9 @@ def label_parsing(rna_label_files, atac_label_files):
 
 
 if __name__ == '__main__':
-	rna_h5_files = ["data/exprs_10xPBMC_atac.h5"]
-	rna_label_files = ["data/maize_cell_type_organized.csv"] # csv file
-	
-	atac_h5_files = ["data/exprs_10xPBMC_rna.h5"]
+	#rna_h5_files = ["data/exprs_10xPBMC_atac.h5"]
+	rna_label_files = ["data/maize_leaf_harmony_integrated.v3.subLEIDEN.metadata.csv"] # csv file
+	#atac_h5_files = ["data/exprs_10xPBMC_rna.h5"]
 	atac_label_files = []
 		
 	
